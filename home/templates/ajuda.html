@@ -1,44 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <!-- Meta tags Obrigatórias -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% include "partials/head.html" %}
+{% include "partials/header.html" %}
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-
-    <title>Ajuda</title>
-  </head>
-  <body>
-    <!-- Cabeçalho do Projeto -->
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-        <a class="navbar-brand text-light" href="{% url 'index' %}"><img src="https://static.djangoproject.com/img/logo-django.42234b631760.svg" alt=""> <img
-                src="https://static.djangoproject.com/img/fundraising-heart.cd6bb84ffd33.svg" style="width:30px"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-
-            <li class="nav-item">
-              <a class="nav-link text-light" href="{% url 'sobre' %}">Sobre</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="{% url 'ajuda' %}">Ajuda</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="{% url 'contato' %}">Contato</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-    <!-- Fim do Cabeçalho -->
-
+<body>
+    
     <main>
         <h1 class="text-center">Ajuda</h1>
     </main>
