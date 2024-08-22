@@ -1,16 +1,20 @@
-<div class="card m-2 justify-content-center" style="width: 15rem;">
-    {% load static %}
-    <img class="card-img-top" src="{% static "img/diassemanas.png" %}" alt="Imagem de capa do card">
-    <div class="card-body">
-      <h5 class="card-title text-center">Dia da Semana</h5>
-      <p class="card-text text-justify">Descubra uma atividade especial para qualquer dia da semana! Escolha um número de 1 a 7 e receba uma sugestão para tornar seu dia ainda mais interessante.</p>
-      <form class="form-inline">
-        <div class="card-body">
-          <div class="row">
-            <input type="number" class="col-sm col-6 mr-1">
-            <button href="#" class="btn btn-dark col-sm col-6">Sugestão</button>
+<div class="container d-flex">
+  {% load static %}
+  {% for item in lista %}
+  <div class="card m-2 justify-content-center" style="width: 20rem;">
+      <img class="card-img-top img-fluid" src="{% static 'img/' %}{{item.imagem}}" alt="Imagem de capa do card">
+      <div class="card-body">
+        <h5 class="card-title text-center">{{item.nome}}</h5>
+        <p class="card-text text-justify">{{item.descricao}}</p>
+        <form class="form-inline" method='post'>
+          <div class="card-body">
+            <div class="d-flex">
+              <input class="col-sm col-6 mr-1" style="display: {{ item.input }};">
+              <button href="" class="btn btn-dark col-sm col-6">Enviar</button>
           </div>
-        </div>
-      </form>
+          </div>
+        </form>
+      </div>
     </div>
+    {% endfor %}
 </div>

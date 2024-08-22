@@ -1,0 +1,26 @@
+{% include "partials/head.html" %}
+{% include "partials/header.html" %}
+
+<body>
+    
+    
+    <h1 class="text-center">Lista de Produtos</h1>
+    
+    <a class="m-3 btn btn-secondary" href="{% url 'formularioproduto' %}">Novo Produto</a>
+
+    <table class="text-center mx-auto" border="1" width='400'>
+        <tr>
+            <th>Código</th>
+            <th>Descrição</th>
+            <th>Valor (R$)</th>
+        </tr>
+        {% for item in lista %}
+        <tr>
+            <td>{{item.id}}</td>
+            <td>{{item.nome}}</td>
+            <td>{{item.preco}}<br></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>

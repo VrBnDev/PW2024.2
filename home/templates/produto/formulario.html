@@ -1,0 +1,19 @@
+{% include "partials/head.html" %}
+{% include "partials/header.html" %}
+
+<body>
+
+    <h1 class="text-center">Formulário de Produtos </h1>
+    <form class="d-flex justify-content-center p-3" method="post">
+        {% csrf_token %}
+        <fieldset class="border  p-2">
+            <legend>Dados do Produto</legend>
+            <div>Nome: <input type="text" name="nome"></div>
+            <br>
+            <div>Preço: <input type="number" name='preco'></div>
+            <br>
+            <div><button class="btn btn-secondary" type="submit">Salvar</button></div>
+        </fieldset>
+    </form>
+
+</body>
