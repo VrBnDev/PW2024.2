@@ -10,8 +10,8 @@
           {% csrf_token %}
           <div class="card-body">
             <div class="d-flex">
-              <input class="col-sm col-6 mr-1" style="display: {{ item.input }};">
-              <button href="{% url item.url %}" class="btn btn-dark col-sm col-6">Enviar</button>
+              <input name='param' id='param' class="col-sm col-6 mr-1" style="display: {{ item.input }};">
+              <button class="btn btn-dark col-sm col-6">Enviar</button>
           </div>
           </div>
         </form>
