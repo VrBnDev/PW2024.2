@@ -17,9 +17,9 @@ def contato(request):
 def desafio(request):
     contexto = {
         'lista' :[
-        {'id': 1, 'nome': 'Perfil','descricao': 'Redicione o usuário para uma página com uma saudação e o nome dele.', 'imagem': "perfil.jpg", "input": "inline", 'url': "perfil"},
-        {'id': 2, 'nome': 'Dias da Semana','descricao': 'Caro usuário você tem direito a uma mensagem semanal. Para escolher sua mensagem, escolha um número de 1 a 7.', 'imagem': "diassemanas.png", "input": "inline", 'url': "diasemana"},
-        {'id': 3, 'nome': 'Produtos','descricao': 'Nesse case uma listagem de produtos foi cadastrado.', 'imagem': "produtos.jpg", "input": "none", 'url': "produto"},
+        {'id': 1, 'nome': 'Perfil','descricao': '🏗 Em construção! Entrada somente pela URL: perfil/{nome usuario} 🏗 ', 'imagem': "perfil.jpg", "input": "inline", 'url': "desafio"},
+        {'id': 2, 'nome': 'Dias da Semana','descricao': '🏗 Em construção! Entrada somente pela URL: diasemana/{dia da semana} 🏗', 'imagem': "diassemanas.png", "input": "inline", 'url': "desafio"},
+        {'id': 3, 'nome': 'Produtos','descricao': '🏗 Em construção! Entrada somente pela URL: lista 🏗', 'imagem': "produtos.jpg", "input": "none", 'url': "desafio"}
     ]}
 
     return render(request, 'desafio.html', contexto)
