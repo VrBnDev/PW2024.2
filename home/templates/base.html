@@ -46,17 +46,22 @@
 </head>
 <body>
 
-	<div class="cabecalho h2 p-4">
-		VR | Meu Sistema
-	</div>
+	<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+		<a class="navbar-brand text-light" href="{% url 'index' %}"><img src="https://static.djangoproject.com/img/logo-django.42234b631760.svg" alt=""> <img
+				src="https://static.djangoproject.com/img/fundraising-heart.cd6bb84ffd33.svg" style="width:30px"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+	  </nav>
 
 	<div class="lateral">
 		<h2>Cadastros</h2>
 		<ul>
 			<li><a href="{% url 'index' %}">Home</a></li>
 			<li><a href="{% url 'lista' %}">Listagem de Produtos</a></li>
-			<li>Clientes</li>
-			<li>Outros</li>
+			<li><a href="{% url 'desafio' %}">Desafios</a></li>
+			<li><a href="{% url 'sobre' %}">Sobre</a></li>
+			<li><a href="{% url 'contato' %}">Contato</a></li>
 		</ul>
 	</div>
 
