@@ -1,9 +1,7 @@
-{% include "partials/head.html" %}
-{% include "partials/header.html" %}
+{% extends "base.html" %}
 
-<body>
-
-    <h1 class="text-center">Formulário de Produtos </h1>
+{% block h1 %}Cadastro de Produtos{% endblock h1 %}
+{% block conteudo %}    
     <form class="d-flex justify-content-center p-3" method="post">
         {% csrf_token %}
         <fieldset class="border  p-2">
@@ -15,5 +13,4 @@
             <div><button class="btn btn-secondary" type="submit">Salvar</button></div>
         </fieldset>
     </form>
-
-</body>
+{% endblock conteudo %}
