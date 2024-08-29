@@ -1,23 +1,22 @@
-{% include "partials/head.html" %}
-
-<body>
+{% extends "base.html" %}
 
     {% include "partials/header.html" %}
-
-    <main class="container-fluid">
-        <article class="d-flex flex-column align-items-center" style="width: 60vw; margin: 0 auto;">
-          {% load static %}
-          <img class="img-fluid my-2" src="{% static 'img/avatar-vitoria.png' %}" alt="Avatar de Vitória" style="width: 20vw;">
-          <p class="text-center">Este site foi desenvolvido como parte da disciplina de Programação Web no Instituto Federal do Piauí (IFPI), utilizando o framework Django. O objetivo deste projeto é servir como um repositório para as atividades e projetos desenvolvidos ao longo do curso, permitindo uma fácil visualização e consulta do progresso.</p>
-          <p class="text-center">Cada atividade presente neste site reflete o aprendizado e as habilidades adquiridas durante as aulas, desde conceitos básicos até a implementação de funcionalidades mais avançadas. Este espaço não apenas organiza o trabalho desenvolvido, mas também oferece um local centralizado para revisões, melhorias e futuras referências.</p>
-          <p class="text-center">Espero que este projeto sirva como uma ferramenta útil tanto para meu próprio desenvolvimento quanto para outros que estejam interessados em explorar as aplicações práticas do Django no contexto da programação web.</p>
-        </article>
-    </main>
-    <!-- JavaScript (Opcional) -->
-    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
+    {% block h1 %}Página Principal{% endblock h1 %}
+    {% block conteudo %}
+      <main class="container-fluid">
+          <article class="d-flex flex-column align-items-center" style="width: 60vw; margin: 0 auto;">
+            {% load static %}
+            <img class="img-fluid my-2" src="{% static 'img/avatar-vitoria.png' %}" alt="Avatar de Vitória" style="width: 20vw;">
+            <p class="text-center">Este site foi desenvolvido como parte da disciplina de Programação Web no Instituto Federal do Piauí (IFPI), utilizando o framework Django. O objetivo deste projeto é servir como um repositório para as atividades e projetos desenvolvidos ao longo do curso, permitindo uma fácil visualização e consulta do progresso.</p>
+            <p class="text-center">Cada atividade presente neste site reflete o aprendizado e as habilidades adquiridas durante as aulas, desde conceitos básicos até a implementação de funcionalidades mais avançadas. Este espaço não apenas organiza o trabalho desenvolvido, mas também oferece um local centralizado para revisões, melhorias e futuras referências.</p>
+            <p class="text-center">Espero que este projeto sirva como uma ferramenta útil tanto para meu próprio desenvolvimento quanto para outros que estejam interessados em explorar as aplicações práticas do Django no contexto da programação web.</p>
+          </article>
+      </main>
+      <!-- JavaScript (Opcional) -->
+      <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    {% endblock conteudo %}
   </body>
 </html>

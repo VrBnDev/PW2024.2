@@ -9,5 +9,6 @@ urlpatterns = [
     path("perfil/<str:usuario>", views.perfil, name='perfil'),
     path("diasemana/<str:dia>", views.diasemana, name='diasemana'),
     path("lista/", views.lista, name='lista'),
-    path("formularioproduto/", views.formularioproduto, name='formularioproduto')
+    path("formularioproduto/", views.formularioproduto, name='formularioproduto'),
+    path("base/", views.base, name='base')
 ]

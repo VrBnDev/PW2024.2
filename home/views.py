@@ -17,9 +17,9 @@ def contato(request):
 def desafio(request):
     contexto = {
         'lista' :[
-        {'id': 1, 'nome': 'Perfil','descricao': '🏗 Em construção! Entrada somente pela URL: perfil/{nome usuario} 🏗 ', 'imagem': "perfil.jpg", "input": "inline", 'url': "desafio"},
-        {'id': 2, 'nome': 'Dias da Semana','descricao': '🏗 Em construção! Entrada somente pela URL: diasemana/{dia da semana} 🏗', 'imagem': "diassemanas.png", "input": "inline", 'url': "desafio"},
-        {'id': 3, 'nome': 'Produtos','descricao': '🏗 Em construção! Entrada somente pela URL: lista 🏗', 'imagem': "produtos.jpg", "input": "none", 'url': "desafio"}
+        {'id': 1, 'nome': 'Perfil','descricao': 'URL: perfil/{nome usuario}', 'imagem': "perfil.jpg", "input": "inline", 'url': "desafio"},
+        {'id': 2, 'nome': 'Dias da Semana','descricao': 'URL: diasemana/{dia da semana} ', 'imagem': "diassemanas.png", "input": "inline", 'url': "desafio"},
+        {'id': 3, 'nome': 'Produtos','descricao': 'URL: lista ', 'imagem': "produtos.jpg", "input": "none", 'url': "lista"}
     ]}
 
     return render(request, 'desafio.html', contexto)
@@ -50,3 +50,7 @@ def lista(request):
 
 def formularioproduto(request):
     return render(request, 'produto/formulario.html')
+
+
+def base(request):
+    return render(request, 'base.html')

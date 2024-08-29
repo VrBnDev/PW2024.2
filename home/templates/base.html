@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<!-- Meta tags Obrigatórias -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Font Awesome -->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+	<link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">	
+	
+	<style>
+		.cabecalho {
+			background-color: #2f2c2c;
+			padding: 5px;
+			margin-bottom: 15px;
+			color: white;
+		}
+
+		.lateral {
+			background-color: #f2f2f2;
+			padding: 5px;
+			float: left;
+			width: 20%;
+		}
+
+		.conteudo {
+			background-color: #f2f2f2;
+			padding: 5px;
+			float: right;
+			width: 75%;
+		}
+
+		.lateral ul li{
+			list-style: none;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="cabecalho h2 p-4">
+		VR | Meu Sistema
+	</div>
+
+	<div class="lateral">
+		<h2>Cadastros</h2>
+		<ul>
+			<li><a href="{% url 'index' %}">Home</a></li>
+			<li><a href="{% url 'lista' %}">Listagem de Produtos</a></li>
+			<li>Clientes</li>
+			<li>Outros</li>
+		</ul>
+	</div>
+
+
+	<div class="conteudo">
+
+		<h1>{% block h1 %} {% endblock %}</h1>
+
+		{% block conteudo %}
+
+		{% endblock %}
+	</div>
+
+</body>
+</html>
