@@ -1,0 +1,8 @@
+.card{
+    max-width: 300px;
+}
+
+.table{
+    max-width: 95vw;
+    border: 1px solid #aaa;
+}

@@ -1,7 +1,8 @@
 .cabecalho {
-    background-color: orange;
+    background-color: #2f2c2c;
     padding: 5px;
     margin-bottom: 15px;
+    color: white;
 }
 
 .lateral {
@@ -16,4 +17,12 @@
     padding: 5px;
     float: right;
     width: 75%;
+}
+
+.lateral ul li{
+    list-style: none;
+}
+
+.btn-custom{
+    background-color: #f53f88;
 }

@@ -1,0 +1,21 @@
+.cabecalho {
+    background-color: #2f2c2c;
+    padding: 5px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.conteudo {
+    background-color: #f2f2f2;
+    padding: 5px;
+    float: right;
+    width: 95vw;
+}
+
+.lateral ul li{
+    list-style: none;
+}
+
+.btn-custom{
+    background-color: #f53f88;
+}

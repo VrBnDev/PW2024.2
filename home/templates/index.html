@@ -6,10 +6,31 @@
       <main class="container-fluid">
           <article class="d-flex flex-column align-items-center" style="width: 60vw; margin: 0 auto;">
             {% load static %}
-            <img class="img-fluid my-2" src="{% static 'img/avatar-vitoria.png' %}" alt="Avatar de Vitória" style="width: 20vw;">
+            <img class="img-fluid my-2" src="{% static 'home/img/avatar-vitoria.png' %}" alt="Avatar de Vitória" style="width: 20vw;">
             <p class="text-center">Este site foi desenvolvido como parte da disciplina de Programação Web no Instituto Federal do Piauí (IFPI), utilizando o framework Django. O objetivo deste projeto é servir como um repositório para as atividades e projetos desenvolvidos ao longo do curso, permitindo uma fácil visualização e consulta do progresso.</p>
             <p class="text-center">Cada atividade presente neste site reflete o aprendizado e as habilidades adquiridas durante as aulas, desde conceitos básicos até a implementação de funcionalidades mais avançadas. Este espaço não apenas organiza o trabalho desenvolvido, mas também oferece um local centralizado para revisões, melhorias e futuras referências.</p>
             <p class="text-center">Espero que este projeto sirva como uma ferramenta útil tanto para meu próprio desenvolvimento quanto para outros que estejam interessados em explorar as aplicações práticas do Django no contexto da programação web.</p>
+          </article>
+          <article class="d-flex flex-column align-items-center" style="width: 60vw; margin: 0 auto;">
+            <h2 class='text-center'>Leituras Auxiliares</h2>
+            <div class="card-deck">
+              <div class="card">
+                <img class="card-img-top" src="{% static "home/img/the-django-book.png" %}" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <h5 class="card-title">Django - <small class="card-subtitle text-muted">The Definitive Guide to Django: Web Development Done Right</small></h5>
+                  <div class="card-footer">
+                    <small class="text-muted">Adrian Holovaty, Jacob K. Moss</small>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <img class="card-img-top" src="{% static "home/img/django-design-patterns.png" %}" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <h5 class="card-title">Django Design Patterns and Best Practices <small class="text-muted">Easily build maintainable websites with powerful and relevant Django design patterns</small></h5>
+                  <div class="card-footer"><small class="text-muted">Arun Ravindran</small></div>
+                </div>
+              </div>
+            </div>
           </article>
       </main>
       <!-- JavaScript (Opcional) -->

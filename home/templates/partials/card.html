@@ -2,7 +2,7 @@
   {% load static %}
   {% for item in lista %}
   <div class="card m-2 justify-content-center" style="width: 20rem;">
-      <img class="card-img-top img-fluid" src="{% static 'img/' %}{{item.imagem}}" alt="Imagem de capa do card">
+      <img class="card-img-top img-fluid" src="{% static 'home/img/' %}{{item.imagem}}" alt="Imagem de capa do card">
       <div class="card-body">
         <h5 class="card-title text-center">{{item.nome}}</h5>
         <p class='text-center'>{{item.descricao}}</p>
