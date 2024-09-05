@@ -1,6 +1,6 @@
-from django.shortcuts import render
-from django.http import HttpResponse
-
+from django.shortcuts import render,redirect
+from .models import Produto
+from home.forms import ProdutoForm
 
 def home(request):
     return render(request, 'index.html')
@@ -39,18 +39,49 @@ def diasemana(request, dia):
 
 def lista(request):
     contexto = {
-        'lista': [
-            {'id': 1, 'nome': 'Notebook', 'preco': '2.500,00'},
-            {'id': 2, 'nome': 'Monitor', 'preco': '500,00'},
-            {'id': 3, 'nome': 'Teclado', 'preco': '80,00'},
-        ]
+        'lista': Produto.objects.all()
     }
 
     return render(request, 'produto/lista.html', contexto)
 
 def formularioproduto(request):
-    return render(request, 'produto/formulario.html')
+    if request.method == "POST":
+        formulario = ProdutoForm(request.POST)
+        if formulario.is_valid():
+            formulario.save()
+            return redirect('lista') 
 
+    else:
+        formulario = ProdutoForm()
+
+    return render(request, 'produto/formulario.html', {"form": formulario})
+
+
+def editar_produto(request, id):
+    produto = Produto.objects.get(pk=id)
+
+    if request.method == "GET":
+        form = ProdutoForm(instance=produto)
+    else:
+        form = ProdutoForm(request.POST,instance=produto)
+        if form.is_valid:
+            form.save()
+            return redirect('lista')
+        
+    context = {
+        'form': form
+    }
+
+    return render(request, 'produto/formulario.html', context)
+
+def remover_produto(request, id):
+    produto = Produto.objects.get(pk=id)
+
+    if request.method == "POST":
+        produto.delete()
+        return redirect('lista')
+
+    return render(request, 'produto/remover.html', {'produto': produto})
 
 def base(request):
     return render(request, 'base.html')

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Cadastro de Produtos{% endblock title %}
+
+{% block h1 %}Remoção de Produtos{% endblock h1 %}
+{% block conteudo %}    
+    <form class="d-flex justify-content-center p-3" method="post">
+        {% csrf_token %}
+        <fieldset>
+            <legend>Deseja remover o produto?</legend>
+            <fieldset>
+                <p class='h5'>Nome: {{produto.nome}}</p>
+                <p class='h5'>Preço: {{produto.preco}}</p>
+            </fieldset>
+            <div><button class="btn btn-secondary" type="submit">Salvar</button></div>
+        </fieldset>
+    </form>
+{% endblock conteudo %}

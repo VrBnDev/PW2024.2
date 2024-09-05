@@ -12,12 +12,20 @@
             <th>Código</th>
             <th>Descrição</th>
             <th>Valor (R$)</th>
+            <th>Ações</th>
         </tr>
         {% for item in lista %}
         <tr>
             <td>{{item.id}}</td>
             <td>{{item.nome}}</td>
-            <td>{{item.preco}}<br></td>
+            <td>{{item.preco}}</td>
+            <td>
+                <div class='d-flex justify-content-around'>
+                    <a class="fa-solid fa-edit badge-custom" href="{% url 'editar_produto' id=item.id %}"></a>
+                    <a class="fa-solid fa-trash" href="{% url 'remover_produto' id=item.id %}"></a>
+                <div>
+                <br>
+            </td>
         </tr>
         {% endfor %}
     </table>
