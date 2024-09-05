@@ -1,16 +1,16 @@
 :root{
     --white: #fff;
-    --pink-50: '#fdf2f8';
-    --pink-100: '#fce7f3';
-    --pink-200: '#fbcfe7';
-    --pink-300: '#f9a8d3';
-    --pink-400: '#f472b4';
-    --pink-500: '#ec4896';
-    --pink-600: '#d82471';
-    --pink-700: '#be185a';
-    --pink-800: '#9d174b';
-    --pink-900: '#831841';
-    --pink-950: '#500723';
+    --pink-50: #fdf2f8;
+    --pink-100: #fce7f3;
+    --pink-200: #fbcfe7;
+    --pink-300: #f9a8d3;
+    --pink-400: #f472b4;
+    --pink-500: #ec4896;
+    --pink-600: #d82471;
+    --pink-700: #be185a;
+    --pink-800: #9d174b;
+    --pink-900: #831841;
+    --pink-950: #500723;
     --pink-btn-default: linear-gradient(rgb(236, 72, 150) 0%, rgb(216, 36, 113) 100%);
     --pink-btn-hover: linear-gradient(rgb(216, 36, 113) 0%, rgb(190, 24, 90) 100%);
     --pink-btn-active: linear-gradient(rgb(190, 24, 90) 0%, rgb(157, 23, 75) 100%);
@@ -47,4 +47,16 @@
 
 .heading{
     font-size: clamp(1.5rem, 1.0774rem + 3.7936vw, 2.625rem);
+}
+
+.icon-custom{
+    color: var(--pink-700);
+}
+
+.icon-custom:hover{
+    color: var(--pink-900);
+}
+
+.icon-custom:active{
+    color: var(--pink-300);
 }
