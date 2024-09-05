@@ -1,5 +1,7 @@
 import os
+import pymysql
 from pathlib import Path
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -66,10 +68,16 @@ WSGI_APPLICATION = 'api.wsgi.app'
 # Note: Django modules for using databases are not support in serverless
 # environments like Vercel. You can use a database over HTTP, hosted elsewhere.
 
+pymysql.install_as_MySQLdb()
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'zpfvzz_django',
+        'USER': 'zpfvzz_django',
+        'PASSWORD': 'BhkceVXP7F',
+        'HOST': 'mysql-ag-br1-19.hospedagemelastica.com.br',
+        'PORT': '3306',
     }
 }
 
